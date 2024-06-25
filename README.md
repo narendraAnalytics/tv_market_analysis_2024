@@ -1,7 +1,7 @@
 
 # Tv_Market_analysis_2024
 
-![Data Cleaning Process](Desktop/2024/TV_Market_Analysis_2024/docs/images/Image_Robts_tv.webp)
+![Data Cleaning Process](docs/images/Image_Robts_tv.webp)
 
 
 ## Project Description
