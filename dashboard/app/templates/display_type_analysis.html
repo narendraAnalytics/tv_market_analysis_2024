@@ -2,5 +2,39 @@
 
 {% block content %}
 <h1>Display Type Analysis</h1>
-<p>Content for display type analysis will go here.</p>
+<p>This page provides insights into the different display types of TVs in the dataset.</p>
+
+<h2>Key Metrics</h2>
+<ul>
+  <li>Total number of unique display types: {{ total_display_types }}</li>
+  <li>Most common display type: {{ most_common_display_type }}</li>
+</ul>
+
+<h2>Visualizations</h2>
+
+<div>
+  <h3>Display Type Distribution</h3>
+  {{ display_type_dist_plot|safe }}
+</div>
+
+<div>
+  <h3>Price Distribution by Display Type</h3>
+  {{ price_dist_display_plot|safe }}
+</div>
+
+<div>
+  <h3>Average Price by Display Type</h3>
+  {{ avg_price_display_plot|safe }}
+</div>
+
+<div>
+  <h3>Screen Size Distribution by Display Type</h3>
+  {{ screen_size_dist_display_plot|safe }}
+</div>
+
+<div>
+  <h3>Price vs. Screen Size by Display Type</h3>
+  {{ price_vs_size_display_plot|safe }}
+</div>
+
 {% endblock %}

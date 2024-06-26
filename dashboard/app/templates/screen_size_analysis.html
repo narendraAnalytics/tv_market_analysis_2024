@@ -2,5 +2,40 @@
 
 {% block content %}
 <h1>Screen Size Analysis</h1>
-<p>Content for screen size analysis will go here.</p>
+<p>This page provides insights into the screen sizes of TVs in the dataset.</p>
+
+<h2>Key Metrics</h2>
+<ul>
+  <li>Total number of unique screen sizes: {{ total_screen_sizes }}</li>
+  <li>Most common screen size: {{ most_common_screen_size }} inches</li>
+  <li>Average screen size: {{ average_screen_size }} inches</li>
+</ul>
+
+<h2>Visualizations</h2>
+
+<div>
+  <h3>Screen Size Distribution</h3>
+  {{ screen_size_dist_plot|safe }}
+</div>
+
+<div>
+  <h3>Screen Size Distribution by Price Category</h3>
+  {{ screen_size_dist_category_plot|safe }}
+</div>
+
+<div>
+  <h3>Screen Size Distribution by Brand</h3>
+  {{ screen_size_dist_brand_plot|safe }}
+</div>
+
+<div>
+  <h3>Average Screen Size by Price Category</h3>
+  {{ avg_screen_size_category_plot|safe }}
+</div>
+
+<div>
+  <h3>Price vs. Screen Size</h3>
+  {{ price_vs_size_plot|safe }}
+</div>
+
 {% endblock %}

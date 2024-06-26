@@ -2,5 +2,40 @@
 
 {% block content %}
 <h1>Price Analysis</h1>
-<p>Content for price analysis will go here.</p>
+<p>This page provides insights into the pricing of TVs in the dataset.</p>
+
+<h2>Key Metrics</h2>
+<ul>
+  <li>Total number of price categories: {{ total_price_categories }}</li>
+  <li>Average price of TVs: {{ average_price }}</li>
+  <li>Price range: {{ min_price }} - {{ max_price }}</li>
+</ul>
+
+<h2>Visualizations</h2>
+
+<div>
+  <h3>Price Distribution</h3>
+  {{ price_dist_plot|safe }}
+</div>
+
+<div>
+  <h3>Price Distribution by Price Category</h3>
+  {{ price_dist_category_plot|safe }}
+</div>
+
+<div>
+  <h3>Price Distribution by Display Type</h3>
+  {{ price_dist_display_plot|safe }}
+</div>
+
+<div>
+  <h3>Average Price by Price Category</h3>
+  {{ avg_price_category_plot|safe }}
+</div>
+
+<div>
+  <h3>Price vs. Screen Size</h3>
+  {{ price_vs_size_plot|safe }}
+</div>
+
 {% endblock %}
