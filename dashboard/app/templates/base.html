@@ -17,6 +17,10 @@
       </ul>
     </nav>
     <div class="container">
+      <!-- Add an image to the dashboard -->
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="{{ url_for('static', filename='/workspaces/tv_market_analysis_2024/dashboard/app/static/images/Image_Robts_tv.webp') }}" alt="Dashboard Image" style="max-width: 100%; height: auto;">
+      </div>
       {% block content %}{% endblock %}
     </div>
   </body>
