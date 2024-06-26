@@ -1,6 +1,61 @@
 {% extends "base.html" %}
 
 {% block content %}
+<style>
+  @keyframes slide {
+    from {
+      margin-left: 0%;
+    }
+    to {
+      margin-left: 5%;
+    }
+  }
+
+  h1 {
+    color: #4CAF50; /* Change text color */
+    animation: slide 2s ease-in-out infinite alternate;
+  }
+</style>
+
 <h1>Welcome to the Flask Dashboard</h1>
 <p>This dashboard provides various insights into the TV dataset.</p>
+
+<h2>Key Metrics</h2>
+<ul>
+  <li>Total number of TVs: {{ total_tvs }}</li>
+  <li>Average price: {{ average_price }}</li>
+</ul>
+
+<h2>Visualizations</h2>
+
+<div>
+  <h3>Price Distribution of Top 6 Brands</h3>
+  {{ price_dist_brand_plot|safe }}
+</div>
+
+<div>
+  <h3>Market Share by Display Type</h3>
+  {{ display_type_plot|safe }}
+</div>
+
+<div>
+  <h3>Price vs. Screen Size</h3>
+  {{ price_vs_size_plot|safe }}
+</div>
+
+<div>
+  <h3>Average Price by Price Category</h3>
+  {{ avg_price_category_plot|safe }}
+</div>
+
+<div>
+  <h3>Market Share by Price Category</h3>
+  {{ price_category_plot|safe }}
+</div>
+
+<div>
+  <h3>Price Range by Price Category</h3>
+  {{ price_range_category_table|safe }}
+</div>
+
 {% endblock %}

@@ -2,5 +2,39 @@
 
 {% block content %}
 <h1>Brand Analysis</h1>
-<p>Content for brand analysis will go here.</p>
+<p>This page provides insights into the performance and characteristics of different TV brands in the dataset.</p>
+
+<h2>Key Metrics</h2>
+<ul>
+  <li>Total number of brands: {{ total_brands }}</li>
+  <li>Most popular brand: {{ most_popular_brand }}</li>
+</ul>
+
+<h2>Visualizations</h2>
+
+<div>
+  <h3>Number of TVs per Brand (Top 15)</h3>
+  {{ brand_counts_plot|safe }}
+</div>
+
+<div>
+  <h3>Average Price per Brand</h3>
+  {{ avg_price_brand_plot|safe }}
+</div>
+
+<div>
+  <h3>Screen Size Distribution per Brand</h3>
+  {{ screen_size_dist_brand_plot|safe }}
+</div>
+
+<div>
+  <h3>Price Distribution per Brand</h3>
+  {{ price_dist_brand_plot|safe }}
+</div>
+
+<div>
+  <h3>Market Share by Brand (Top 5)</h3>
+  {{ market_share_brand_plot|safe }}
+</div>
+
 {% endblock %}
