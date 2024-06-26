@@ -1,5 +1,5 @@
 body {
-    background-color: #f0f8ff;
+    background-color: #f0f8ff; /* Light blue background for the body */
     font-family: Arial, sans-serif;
   }
   
@@ -33,9 +33,38 @@ body {
   
   .container {
     margin: 20px;
+    background-color: #f9f9f9; /* Light grey background for the container */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   h1, h2, h3 {
     color: #333;
+  }
+  
+  footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-visible {
+    transform: translateY(0);
   }
   
