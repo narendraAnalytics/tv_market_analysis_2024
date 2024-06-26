@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Flask Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dx1mXg6SOV0qfVw/3I3t5m0ddWm4ZZxqHma5OYD4VqT4p3FJ8FZ8J4q5R5g6EzfjE6vKZ6TihpvSzyZQ5ogEJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       body {
         margin: 0;
@@ -87,7 +88,8 @@
       {% block content %}{% endblock %}
     </div>
     <footer id="footer">
-      <p>Contact us: <a href="mailto:info@dashboard.com">narendra.insights@gmail.com</a></p>
+      <p>Contact us: <a href="mailto:info@dashboard.com"><i class="fas fa-envelope"></i> narendra.insights@gmail.com</a></p>
+      
     </footer>
     <script>
       let lastScrollTop = 0;
