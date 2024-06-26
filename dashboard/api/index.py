@@ -1,7 +1,16 @@
 from flask import Flask, jsonify, render_template
 import os
+import pandas as pd
 
 app = Flask(__name__)
+
+# Get the directory of the current file
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# Construct the relative path to the dataset
+file_path = os.path.join(current_dir, '..', 'tv_cleaned_data.csv')
+
+# Load dataset
+data = pd.read_csv(file_path)
 
 @app.route('/')
 def index():
