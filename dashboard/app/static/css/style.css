@@ -4,7 +4,7 @@ body {
   }
   
   nav {
-    background-color: #333;
+    background-color: #4CAF50; /* Navigation bar background color */
     overflow: hidden;
   }
   
@@ -27,8 +27,8 @@ body {
   }
   
   nav ul li a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #45a049; /* Tab hover color */
+    color: white; /* Tab text color on hover */
   }
   
   .container {
