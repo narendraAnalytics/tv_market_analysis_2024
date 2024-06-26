@@ -5,6 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Flask Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        background-color: #4CAF50; /* Navigation bar background color */
+        overflow: hidden;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        float: left;
+      }
+
+      nav ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      nav ul li a:hover {
+        background-color: #45a049; /* Tab hover color */
+        color: white; /* Tab text color on hover */
+      }
+
+      .container {
+        margin: 20px;
+      }
+
+      h1, h2, h3 {
+        color: #333;
+      }
+
+      footer {
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      footer a {
+        color: white;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-visible {
+        transform: translateY(0);
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -17,11 +84,26 @@
       </ul>
     </nav>
     <div class="container">
-      <!-- Add an image to the dashboard -->
-      <div style="text-align: center; margin: 20px 0;">
-        <img src="{{ url_for('static', filename='/workspaces/tv_market_analysis_2024/dashboard/app/static/images/Image_Robts_tv.webp') }}" alt="Dashboard Image" style="max-width: 100%; height: auto;">
-      </div>
       {% block content %}{% endblock %}
     </div>
+    <footer id="footer">
+      <p>Contact us: <a href="mailto:info@dashboard.com">narendra.insights@gmail.com</a></p>
+    </footer>
+    <script>
+      let lastScrollTop = 0;
+      const footer = document.getElementById('footer');
+
+      window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+          // Downscroll
+          footer.classList.add('footer-visible');
+        } else {
+          // Upscroll
+          footer.classList.remove('footer-visible');
+        }
+        lastScrollTop = scrollTop;
+      });
+    </script>
   </body>
 </html>
