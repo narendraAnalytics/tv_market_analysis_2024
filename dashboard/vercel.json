@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "dashboard/api/*.py",
+        "src": "dashboard/api/index.py",
         "use": "@vercel/python"
       }
     ],
